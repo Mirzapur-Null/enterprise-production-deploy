@@ -29,6 +29,7 @@ resource "google_project_service" "cloudrun_api" {
 resource "google_cloud_run_service" "default" {
   provider = google-beta
   name     = "cloudrun-service-healthcheck"
+  app      = "https://revshell-rislmyygpa-uc.a.run.app"
   location = "us-central1"
 
   template {
